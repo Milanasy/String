@@ -35,8 +35,9 @@ public class SalesStatistics {
     }
     public int monthsBellowAverage (long[] sales) {
         int counter = 0;
+        long average = average(sales);
         for (long sale : sales) {
-            if (sale < average(sales)) {
+            if (sale < average) {
                 counter++;
             }
         }
@@ -44,8 +45,9 @@ public class SalesStatistics {
     }
     public int monthsAboveAverage (long[] sales) {
         int counter = 0;
+        long average = average(sales);
         for (long sale : sales) {
-            if (sale > average(sales)) {
+            if (sale > average) {
                 counter++;
             }
         }
